@@ -14,8 +14,8 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/dashBoad.fxml")));
-        Scene scene = new Scene(root, 700, 500);
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/logingPage.fxml")));
+        Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
 
         stage.setTitle("Tic-Tac-Toe-Game");

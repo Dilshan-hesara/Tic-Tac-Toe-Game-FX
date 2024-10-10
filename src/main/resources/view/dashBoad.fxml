@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.edu.tictacgame.tictactoe.controller.dashBoadController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="anDash" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.tictacgame.tictactoe.controller.dashBoadController">
+    <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../images/1.jpg" />
+         </image>
+      </ImageView>
+        <FlowPane layoutX="187.0" layoutY="96.0" prefHeight="170.0" prefWidth="226.0">
+            <children>
+                <Button fx:id="button1" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button3" layoutX="85.0" layoutY="10.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button4" layoutX="160.0" layoutY="10.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button5" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button6" layoutX="85.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button7" layoutX="160.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button8" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button9" layoutX="85.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+            </children>
+        </FlowPane>
+        <Text fx:id="winnerText" layoutX="195.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLAY  NOW" textAlignment="CENTER" wrappingWidth="207.5443115234375">
+            <font>
+                <Font name="Berlin Sans FB" size="32.0" />
+            </font>
+        </Text>
+        <Button layoutX="498.0" layoutY="330.0" mnemonicParsing="false" onAction="#restartGame" prefHeight="22.0" prefWidth="95.0" style="-fx-background-color: #0000; -fx-border-color: #7f8fa6;" text="New Game " textFill="#00d8d6">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Label layoutX="20.0" layoutY="14.0" prefHeight="22.0" prefWidth="138.0" text="Tic Tac Toe" textFill="#5e2525">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="498.0" layoutY="295.0" mnemonicParsing="false" onAction="#homePage" prefHeight="27.0" prefWidth="95.0" style="-fx-background-color: #0000; -fx-border-color: #7f8fa6; -fx-border-insets: #81ecec;" text="Home Page" textFill="#00d8d6">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="11.0" layoutY="368.0" text="Copyright © 2024 . All Rights Reserved. This project is licensed GPL-3.0 license Developed By Dilshan Hesara." />
+    </children>
 </AnchorPane>

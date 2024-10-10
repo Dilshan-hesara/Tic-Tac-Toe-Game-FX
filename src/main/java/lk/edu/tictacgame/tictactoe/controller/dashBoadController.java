@@ -25,5 +25,61 @@
  */
 package lk.edu.tictacgame.tictactoe.controller;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
+
+import java.io.IOException;
+
 public class dashBoadController {
+
+    @FXML
+    private Button button1;
+
+    @FXML
+    private Button button2;
+
+    @FXML
+    private Button button3;
+
+    @FXML
+    private Button button4;
+
+    @FXML
+    private Button button5;
+
+    @FXML
+    private Button button6;
+
+    @FXML
+    private Button button7;
+
+    @FXML
+    private Button button8;
+
+    @FXML
+    private Button button9;
+
+    @FXML
+    private Text winnerText;
+    @FXML
+    private AnchorPane anDash;
+
+    @FXML
+    void homePage(ActionEvent event) throws IOException {
+
+        anDash.getChildren().clear();
+        AnchorPane load = FXMLLoader.load(getClass().getResource("/view/logingPage.fxml"));
+        anDash.getChildren().add(load);
+    }
+
+    @FXML
+    void restartGame(ActionEvent event) {
+
+    }
+
 }
+
