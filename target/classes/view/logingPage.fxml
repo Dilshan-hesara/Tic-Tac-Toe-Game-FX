@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="anlog" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.tictacgame.tictactoe.controller.LogController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="615.0" layoutX="-18.0">
+         <image>
+            <Image url="@../images/1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="199.0" layoutY="136.0" prefHeight="46.0" prefWidth="202.0" text="Tic Tac Toe  Game">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="122.0" fitWidth="220.0" layoutX="180.0" layoutY="14.0">
+         <image>
+            <Image url="@../images/2.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="240.0" layoutY="226.0" mnemonicParsing="false" onAction="#logButten" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #FFF; -fx-border-width: 0 0 1px 0; -fx-border-color: #16a085;" text="PLAY !" textFill="#8e6565">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="10.0" layoutY="355.0" prefHeight="18.0" prefWidth="579.0" text="Copyright © 2024 . All Rights Reserved. This project is licensed GPL-3.0 license Developed By Dilshan Hesara." />
+      <Label layoutX="202.0" layoutY="174.0" prefHeight="16.0" prefWidth="176.0" text="Welcome to Tic Tac Toe Game">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
