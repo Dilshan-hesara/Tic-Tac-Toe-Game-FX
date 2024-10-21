@@ -18,15 +18,15 @@
       </ImageView>
         <FlowPane layoutX="187.0" layoutY="96.0" prefHeight="170.0" prefWidth="226.0">
             <children>
-                <Button fx:id="button1" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
-                <Button fx:id="button2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
-                <Button fx:id="button3" layoutX="85.0" layoutY="10.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
-                <Button fx:id="button4" layoutX="160.0" layoutY="10.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
-                <Button fx:id="button5" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
-                <Button fx:id="button6" layoutX="85.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
-                <Button fx:id="button7" layoutX="160.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
-                <Button fx:id="button8" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
-                <Button fx:id="button9" layoutX="85.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button1" mnemonicParsing="false" onAction="#onButtClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onButtClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button3" layoutX="85.0" layoutY="10.0" mnemonicParsing="false" onAction="#onButtClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button4" layoutX="160.0" layoutY="10.0" mnemonicParsing="false" onAction="#onButtClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button5" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#onButtClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button6" layoutX="85.0" layoutY="85.0" mnemonicParsing="false" onAction="#onButtClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button7" layoutX="160.0" layoutY="85.0" mnemonicParsing="false" onAction="#onButtClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button8" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#onButtClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
+                <Button fx:id="button9" layoutX="85.0" layoutY="160.0" mnemonicParsing="false" onAction="#onButtClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
             </children>
         </FlowPane>
         <Text fx:id="winnerText" layoutX="195.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLAY  NOW" textAlignment="CENTER" wrappingWidth="207.5443115234375">
