@@ -7,6 +7,7 @@ public class BoardImpl implements Board {
 
     private Piece[][] pieces = new Piece[3][3];
     public Piece[][] getPieces() {return pieces;};
+    public BoardUi ui;
 
     @Override
     public void initializeBoard() {
@@ -48,6 +49,15 @@ public class BoardImpl implements Board {
 
     @Override
     public void reset() {
-
+        initializeBoard();  // Reset the board to an empty state
+        if (ui != null) {
+            for (int i = 0; i < pieces.length; i++) {
+                for (int j = 0; j < pieces.length; j++) {
+                    ui.updateBoard(i, j, Piece.EMPTY);  // Update the UI to show the empty board
+                }
+            }
+        }
     }
+
 }
+
