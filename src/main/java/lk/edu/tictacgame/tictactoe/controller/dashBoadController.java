@@ -31,10 +31,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import lk.edu.tictacgame.tictactoe.Board.BoardImpl;
+import lk.edu.tictacgame.tictactoe.Board.BoardUi;
+import lk.edu.tictacgame.tictactoe.Servers.Piece;
 
 import java.io.IOException;
 
-public class dashBoadController {
+public class dashBoadController implements BoardUi {
 
     @FXML
     private Button button1;
@@ -68,6 +71,8 @@ public class dashBoadController {
     @FXML
     private AnchorPane anDash;
 
+    BoardImpl boardGame;
+
     @FXML
     void homePage(ActionEvent event) throws IOException {
 
@@ -96,9 +101,28 @@ public class dashBoadController {
 
     }
 
+    @Override
+    public void updateBoard(int i, int j, Piece piece) {
+
+    }
+
     @FXML
     void restartGame(ActionEvent event) {
+        boardGame.reset();
+        winnerText.setText("Play Again!");
+        resetBoardUi();
+    }
 
+    private void resetBoardUi() {
+        button1.setDisable(false); button1.setText("");
+        button2.setDisable(false); button2.setText("");
+        button3.setDisable(false); button3.setText("");
+        button4.setDisable(false); button4.setText("");
+        button5.setDisable(false); button5.setText("");
+        button6.setDisable(false); button6.setText("");
+        button7.setDisable(false); button7.setText("");
+        button8.setDisable(false); button8.setText("");
+        button9.setDisable(false); button9.setText("");
     }
 
 }
