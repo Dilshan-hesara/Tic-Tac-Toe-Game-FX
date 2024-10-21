@@ -35,7 +35,15 @@ public class BoardImpl implements Board {
 
     @Override
     public boolean isFull() {
-        return false;
+        for (int i = 0; i < pieces.length; i++) {
+            for (int j = 0; j < pieces[i].length; j++) {
+                if (pieces[i][j] == Piece.EMPTY) {
+                    return false;
+                }
+            }
+        }
+        return true;
+
     }
 
     @Override
