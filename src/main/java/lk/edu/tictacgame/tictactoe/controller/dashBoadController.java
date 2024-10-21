@@ -77,6 +77,22 @@ public class dashBoadController {
     }
     @FXML
     void onButtClick(ActionEvent event) {
+        Button clickedButton = (Button) event.getSource();
+        String buttonId = clickedButton.getId();
+
+        int row = -1, col = -1;
+        switch (buttonId) {
+            case "button1": row = 0; col = 0; break;
+            case "button2": row = 0; col = 1; break;
+            case "button3": row = 0; col = 2; break;
+            case "button4": row = 1; col = 0; break;
+            case "button5": row = 1; col = 1; break;
+            case "button6": row = 1; col = 2; break;
+            case "button7": row = 2; col = 0; break;
+            case "button8": row = 2; col = 1; break;
+            case "button9": row = 2; col = 2; break;
+        }
+
 
     }
 
