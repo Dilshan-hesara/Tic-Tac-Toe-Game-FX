@@ -49,11 +49,11 @@ public class BoardImpl implements Board {
 
     @Override
     public void reset() {
-        initializeBoard();  // Reset the board to an empty state
+        initializeBoard();
         if (ui != null) {
             for (int i = 0; i < pieces.length; i++) {
                 for (int j = 0; j < pieces.length; j++) {
-                    ui.updateBoard(i, j, Piece.EMPTY);  // Update the UI to show the empty board
+                    ui.updateBoard(i, j, Piece.EMPTY);
                 }
             }
         }

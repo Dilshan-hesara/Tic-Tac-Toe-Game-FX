@@ -75,6 +75,10 @@ public class dashBoadController {
         AnchorPane load = FXMLLoader.load(getClass().getResource("/view/logingPage.fxml"));
         anDash.getChildren().add(load);
     }
+    @FXML
+    void onButtClick(ActionEvent event) {
+
+    }
 
     @FXML
     void restartGame(ActionEvent event) {
