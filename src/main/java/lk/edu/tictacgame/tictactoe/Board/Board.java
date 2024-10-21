@@ -9,9 +9,7 @@ public interface Board {
 
     boolean isLegalMove(int row, int col);
 
-    void placePiece(int row, int col, Piece piece);
-
-    Piece getPieceAt(int row, int col);
+    void upMove(int row, int col, Piece piece);
 
     Winner checkWinner();
 
