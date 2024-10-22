@@ -112,18 +112,28 @@ public class dashBoadController implements BoardUi {
             case "button8": row = 2; col = 1; break;
             case "button9": row = 2; col = 2; break;
         }
-        humanPlayer.move(row, col);
-        aiPlayer.move(row, col);
-        updateUi();
 
-        if (boardGame.checkWinner() != null) {
-            winnerText.setText(boardGame.checkWinner().getWinningPiece());
-        } else if (boardGame.isFull()) {
-            showAlt("Tie");
+        if (boardGame.isLegalMove(row, col)) {
+            humanPlayer.move(row, col);
+            updateUi();
+
+            if (boardGame.checkWinner() != null) {
+                winnerText.setText(boardGame.checkWinner().getWinningPiece());
+            } else if (boardGame.isFull()) {
+                showAlt("Tie");
+            } else {
+
+                aiPlayer.move(row, col);
+                updateUi();
+                if (boardGame.checkWinner() != null) {
+                    winnerText.setText(boardGame.checkWinner().getWinningPiece());
+                }
+            }
+        } else {
+            showAlt("Illegal move! Try again.");
         }
-
-
     }
+
 
     @Override
     public void updateBoard(int row, int col, Piece piece) {
