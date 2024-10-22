@@ -169,5 +169,14 @@ public class dashBoadController implements BoardUi {
             }
         }
     }
+
+    private void showAlt(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, message);
+        alert.setOnCloseRequest((DialogEvent event) -> {
+            boardGame.initializeBoard();
+            updateUi();
+        });
+        alert.showAndWait();
+    }
 }
 
