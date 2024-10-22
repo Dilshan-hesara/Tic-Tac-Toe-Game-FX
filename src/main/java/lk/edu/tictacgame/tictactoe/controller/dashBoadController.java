@@ -119,6 +119,7 @@ public class dashBoadController implements BoardUi {
 
             if (boardGame.checkWinner() != null) {
                 winnerText.setText(boardGame.checkWinner().getWinningPiece());
+                disableAllButt();
             } else if (boardGame.isFull()) {
                 showAlt("Tie");
             } else {
@@ -127,6 +128,7 @@ public class dashBoadController implements BoardUi {
                 updateUi();
                 if (boardGame.checkWinner() != null) {
                     winnerText.setText(boardGame.checkWinner().getWinningPiece());
+                    disableAllButt();
                 }
             }
         } else {
