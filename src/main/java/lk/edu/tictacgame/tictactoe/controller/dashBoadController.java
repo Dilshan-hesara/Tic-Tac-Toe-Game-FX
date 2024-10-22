@@ -124,7 +124,7 @@ public class dashBoadController implements BoardUi {
             updateUi();
 
             if (boardGame.checkWinner() != null) {
-                winnerText.setText(boardGame.checkWinner().getWinningPiece());
+                winnerText.setText(boardGame.checkWinner().getWinningPiece().toString());
                 disableAllButt();
                 showAlt("X Won!");
                 newGame();
@@ -132,12 +132,12 @@ public class dashBoadController implements BoardUi {
             } else if (boardGame.isFull()) {
                 showAlt("Tie! Play Again.");
             } else {
-                aiPlayer.move(row,col);
+                aiPlayer.findBestMove();
                 updateUi();
 
 
                 if (boardGame.checkWinner() != null) {
-                    winnerText.setText(boardGame.checkWinner().getWinningPiece());
+                    winnerText.setText(boardGame.checkWinner().getWinningPiece().toString());
                     disableAllButt();
                     showAlt("AI Won! Play Again.");
                     newGame();

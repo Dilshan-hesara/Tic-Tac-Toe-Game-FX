@@ -20,7 +20,7 @@ public class Winner {
         this.row3 = row3;
     }
 
-    public String getWinningPiece() {
-        return winningPiece.toString(); // Use the toString method of Piece
+    public Piece getWinningPiece() {
+        return winningPiece; // Return the winning piece as a Piece object
     }
 }
