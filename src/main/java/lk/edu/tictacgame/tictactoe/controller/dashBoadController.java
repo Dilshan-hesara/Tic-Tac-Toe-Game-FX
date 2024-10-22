@@ -127,16 +127,18 @@ public class dashBoadController implements BoardUi {
 
     @Override
     public void updateBoard(int row, int col, Piece piece) {
-        if (row == 0 && col == 0) button1.setText(piece.toString());
-        else if (row == 0 && col == 1) button2.setText(piece.toString());
-        else if (row == 0 && col == 2) button3.setText(piece.toString());
-        else if (row == 1 && col == 0) button4.setText(piece.toString());
-        else if (row == 1 && col == 1) button5.setText(piece.toString());
-        else if (row == 1 && col == 2) button6.setText(piece.toString());
-        else if (row == 2 && col == 0) button7.setText(piece.toString());
-        else if (row == 2 && col == 1) button8.setText(piece.toString());
-        else if (row == 2 && col == 2) button9.setText(piece.toString());
+        String pieceText = (piece != null) ? piece.toString() : "";
+        if (row == 0 && col == 0) button1.setText(pieceText);
+        else if (row == 0 && col == 1) button2.setText(pieceText);
+        else if (row == 0 && col == 2) button3.setText(pieceText);
+        else if (row == 1 && col == 0) button4.setText(pieceText);
+        else if (row == 1 && col == 1) button5.setText(pieceText);
+        else if (row == 1 && col == 2) button6.setText(pieceText);
+        else if (row == 2 && col == 0) button7.setText(pieceText);
+        else if (row == 2 && col == 1) button8.setText(pieceText);
+        else if (row == 2 && col == 2) button9.setText(pieceText);
     }
+
 
     @FXML
     void restartGame(ActionEvent event) {
