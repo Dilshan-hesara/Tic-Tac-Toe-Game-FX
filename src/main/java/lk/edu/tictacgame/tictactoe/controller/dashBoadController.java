@@ -83,6 +83,7 @@ public class dashBoadController implements BoardUi {
         boardGame = new BoardImpl();
         aiPlayer = new AiPlayer(boardGame);
         humanPlayer = new HumanPlayer(boardGame);
+        boardGame.initializeBoard();
     }
 
 
@@ -113,6 +114,7 @@ public class dashBoadController implements BoardUi {
             case "button9": row = 2; col = 2; break;
         }
 
+
         if (boardGame.isLegalMove(row, col)) {
             humanPlayer.move(row, col);
             updateUi();
@@ -122,24 +124,32 @@ public class dashBoadController implements BoardUi {
                 disableAllButt();
                 showAlt("X Won!");
                 newGame();
+
             } else if (boardGame.isFull()) {
-                showAlt("Tie");
+                showAlt("Tie! Play Again.");
             } else {
 
-                aiPlayer.move(row, col);
+                aiPlayer.move(row,col);
                 updateUi();
+
+
                 if (boardGame.checkWinner() != null) {
                     winnerText.setText(boardGame.checkWinner().getWinningPiece());
                     disableAllButt();
-                    showAlt("Ai Won! Try again.");
+                    showAlt("AI Won! Play Again.");
                     newGame();
+
 
                 }
             }
         } else {
             showAlt("Illegal move! Try again.");
         }
+        clickedButton.setDisable(true);
+
+
     }
+
 
 
     @Override
@@ -162,6 +172,7 @@ public class dashBoadController implements BoardUi {
         boardGame.reset();
         winnerText.setText("Play Again!");
         resetBoardUi();
+
     }
 
     private void resetBoardUi() {
@@ -174,6 +185,7 @@ public class dashBoadController implements BoardUi {
         button7.setDisable(false); button7.setText("");
         button8.setDisable(false); button8.setText("");
         button9.setDisable(false); button9.setText("");
+
     }
 
     private void disableAllButt() {
@@ -217,6 +229,7 @@ public class dashBoadController implements BoardUi {
         boardGame.reset();
         winnerText.setText("Play Again!");
         resetBoardUi();
+
     }
 }
 
