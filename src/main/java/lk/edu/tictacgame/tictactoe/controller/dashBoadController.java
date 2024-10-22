@@ -30,6 +30,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -116,7 +117,10 @@ public class dashBoadController implements BoardUi {
 
 
         if (boardGame.isLegalMove(row, col)) {
+
+
             humanPlayer.move(row, col);
+            winnerText.setText("Wait, AI is playing...");
             updateUi();
 
             if (boardGame.checkWinner() != null) {
@@ -128,7 +132,6 @@ public class dashBoadController implements BoardUi {
             } else if (boardGame.isFull()) {
                 showAlt("Tie! Play Again.");
             } else {
-
                 aiPlayer.move(row,col);
                 updateUi();
 
@@ -138,14 +141,17 @@ public class dashBoadController implements BoardUi {
                     disableAllButt();
                     showAlt("AI Won! Play Again.");
                     newGame();
+                }else {
+                    winnerText.setText("X is playing");
+                }
 
 
                 }
-            }
+
         } else {
             showAlt("Illegal move! Try again.");
         }
-        clickedButton.setDisable(true);
+
 
 
     }
@@ -230,6 +236,11 @@ public class dashBoadController implements BoardUi {
         winnerText.setText("Play Again!");
         resetBoardUi();
 
+    }
+
+    @FXML
+    void exitButt(ActionEvent event) {
+        System.exit(0);
     }
 }
 

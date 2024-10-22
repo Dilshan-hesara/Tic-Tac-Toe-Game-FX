@@ -9,14 +9,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anDash" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.tictacgame.tictactoe.controller.dashBoadController">
+<AnchorPane fx:id="anDash" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.tictacgame.tictactoe.controller.dashBoadController">
     <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0">
+      <ImageView fitHeight="439.0" fitWidth="640.0">
          <image>
             <Image url="@../images/1.jpg" />
          </image>
       </ImageView>
-        <FlowPane layoutX="187.0" layoutY="96.0" prefHeight="170.0" prefWidth="226.0">
+        <FlowPane layoutX="186.0" layoutY="107.0" prefHeight="226.0" prefWidth="226.0">
             <children>
                 <Button fx:id="button1" mnemonicParsing="false" onAction="#onButtClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
                 <Button fx:id="button2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onButtClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #0000; -fx-border-color: #0abde3;" />
@@ -34,7 +34,7 @@
                 <Font name="Berlin Sans FB" size="32.0" />
             </font>
         </Text>
-        <Button layoutX="498.0" layoutY="330.0" mnemonicParsing="false" onAction="#restartGame" prefHeight="22.0" prefWidth="95.0" style="-fx-background-color: #0000; -fx-border-color: #7f8fa6;" text="New Game " textFill="#00d8d6">
+        <Button layoutX="521.0" layoutY="332.0" mnemonicParsing="false" onAction="#restartGame" prefHeight="22.0" prefWidth="95.0" style="-fx-background-color: #0000; -fx-border-color: #7f8fa6;" text="New Game " textFill="#00d8d6">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Button>
@@ -43,11 +43,16 @@
             <Font name="Berlin Sans FB Demi Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="498.0" layoutY="295.0" mnemonicParsing="false" onAction="#homePage" prefHeight="27.0" prefWidth="95.0" style="-fx-background-color: #0000; -fx-border-color: #7f8fa6; -fx-border-insets: #81ecec;" text="Home Page" textFill="#00d8d6">
+      <Button layoutX="521.0" layoutY="294.0" mnemonicParsing="false" onAction="#homePage" prefHeight="27.0" prefWidth="95.0" style="-fx-background-color: #0000; -fx-border-color: #7f8fa6; -fx-border-insets: #81ecec;" text="Home Page" textFill="#00d8d6">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="11.0" layoutY="368.0" text="Copyright © 2024 . All Rights Reserved. This project is licensed GPL-3.0 license Developed By Dilshan Hesara." />
+      <Label layoutX="33.0" layoutY="407.0" text="Copyright © 2024 . All Rights Reserved. This project is licensed GPL-3.0 license Developed By Dilshan Hesara." />
+      <Button layoutX="521.0" layoutY="370.0" mnemonicParsing="false" onAction="#exitButt" prefHeight="27.0" prefWidth="95.0" style="-fx-background-color: #0000; -fx-border-color: #7f8fa6; -fx-border-insets: #81ecec;" text="Exit" textFill="#00d8d6">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

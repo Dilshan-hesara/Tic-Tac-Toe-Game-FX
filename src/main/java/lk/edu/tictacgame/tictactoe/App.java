@@ -16,7 +16,7 @@ public class App extends Application {
     public void start(Stage stage) throws Exception {
 
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/logingPage.fxml")));
-        Scene scene = new Scene(root, 600, 400);
+        Scene scene = new Scene(root, 642, 439);
 
         Image image = new Image(getClass().getResourceAsStream("/images/app_icon.png"));
         stage.getIcons().add(image);
