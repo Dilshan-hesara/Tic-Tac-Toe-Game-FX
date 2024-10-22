@@ -31,6 +31,21 @@ public class BoardImpl implements Board {
 
     @Override
     public Winner checkWinner() {
+
+        for (int i = 0; i < 3; i++) {
+            if (pieces[i][0] == pieces[i][1] && pieces[i][0] == pieces[i][2] && pieces[i][0] != Piece.EMPTY) {
+                return new Winner(pieces[i][0], i, 0, i, 1, i, 2);
+            }
+            if (pieces[0][i] == pieces[1][i] && pieces[0][i] == pieces[2][i] && pieces[0][i] != Piece.EMPTY) {
+                return new Winner(pieces[0][i], 0, i, 1, i, 2, i);
+            }
+        }
+        if (pieces[0][0] == pieces[1][1] && pieces[0][0] == pieces[2][2] && pieces[0][0] != Piece.EMPTY) {
+            return new Winner(pieces[0][0], 0, 0, 1, 1, 2, 2);
+        }
+        if (pieces[0][2] == pieces[1][1] && pieces[0][2] == pieces[2][0] && pieces[0][2] != Piece.EMPTY) {
+            return new Winner(pieces[0][2], 0, 2, 1, 1, 2, 0);
+        }
         return null;
     }
 
