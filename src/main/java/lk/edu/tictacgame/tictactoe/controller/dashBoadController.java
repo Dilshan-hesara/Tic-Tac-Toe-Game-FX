@@ -146,5 +146,17 @@ public class dashBoadController implements BoardUi {
         button9.setDisable(false); button9.setText("");
     }
 
+    private void disableAllButt() {
+        button1.setDisable(true);
+        button2.setDisable(true);
+        button3.setDisable(true);
+        button4.setDisable(true);
+        button5.setDisable(true);
+        button6.setDisable(true);
+        button7.setDisable(true);
+        button8.setDisable(true);
+        button9.setDisable(true);
+    }
+
 }
 
