@@ -175,10 +175,16 @@ public class dashBoadController implements BoardUi {
     public void updateUi() {
         for (int i = 0; i < boardGame.getPieces().length; i++) {
             for (int j = 0; j < boardGame.getPieces()[i].length; j++) {
-                updateBoard(i, j, boardGame.getPieces()[i][j]);
+                Piece piece = boardGame.getPieces()[i][j];
+                if (piece != null) {
+                    updateBoard(i, j, piece);
+                } else {
+                    updateBoard(i, j, Piece.EMPTY);
+                }
             }
         }
     }
+
 
     private void showAlt(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION, message);
