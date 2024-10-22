@@ -28,7 +28,9 @@ package lk.edu.tictacgame.tictactoe.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.DialogEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import lk.edu.tictacgame.tictactoe.Board.BoardImpl;
@@ -112,6 +114,7 @@ public class dashBoadController implements BoardUi {
         }
 
 
+
     }
 
     @Override
@@ -158,5 +161,13 @@ public class dashBoadController implements BoardUi {
         button9.setDisable(true);
     }
 
+
+    public void updateUi() {
+        for (int i = 0; i < boardGame.getPieces().length; i++) {
+            for (int j = 0; j < boardGame.getPieces()[i].length; j++) {
+                updateBoard(i, j, boardGame.getPieces()[i][j]);
+            }
+        }
+    }
 }
 
