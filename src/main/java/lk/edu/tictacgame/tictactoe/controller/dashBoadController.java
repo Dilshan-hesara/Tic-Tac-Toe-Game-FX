@@ -120,6 +120,8 @@ public class dashBoadController implements BoardUi {
             if (boardGame.checkWinner() != null) {
                 winnerText.setText(boardGame.checkWinner().getWinningPiece());
                 disableAllButt();
+                showAlt("X Won!");
+                newGame();
             } else if (boardGame.isFull()) {
                 showAlt("Tie");
             } else {
@@ -129,6 +131,9 @@ public class dashBoadController implements BoardUi {
                 if (boardGame.checkWinner() != null) {
                     winnerText.setText(boardGame.checkWinner().getWinningPiece());
                     disableAllButt();
+                    showAlt("Ai Won! Try again.");
+                    newGame();
+
                 }
             }
         } else {
@@ -205,6 +210,13 @@ public class dashBoadController implements BoardUi {
             updateUi();
         });
         alert.showAndWait();
+    }
+
+    @FXML
+    void newGame() {
+        boardGame.reset();
+        winnerText.setText("Play Again!");
+        resetBoardUi();
     }
 }
 
