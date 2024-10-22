@@ -112,7 +112,15 @@ public class dashBoadController implements BoardUi {
             case "button8": row = 2; col = 1; break;
             case "button9": row = 2; col = 2; break;
         }
+        humanPlayer.move(row, col);
+        aiPlayer.move(row, col);
+        updateUi();
 
+        if (boardGame.checkWinner() != null) {
+            winnerText.setText(boardGame.checkWinner().getWinningPiece());
+        } else if (boardGame.isFull()) {
+            showAlt("Tie");
+        }
 
 
     }
