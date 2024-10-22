@@ -33,6 +33,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import lk.edu.tictacgame.tictactoe.Board.BoardImpl;
 import lk.edu.tictacgame.tictactoe.Board.BoardUi;
+import lk.edu.tictacgame.tictactoe.Player.AiPlayer;
+import lk.edu.tictacgame.tictactoe.Player.HumanPlayer;
 import lk.edu.tictacgame.tictactoe.Servers.Piece;
 
 import java.io.IOException;
@@ -72,6 +74,16 @@ public class dashBoadController implements BoardUi {
     private AnchorPane anDash;
 
     BoardImpl boardGame;
+    HumanPlayer humanPlayer;
+    AiPlayer aiPlayer;
+
+    public dashBoadController() {
+        boardGame = new BoardImpl();
+        aiPlayer = new AiPlayer(boardGame);
+        humanPlayer = new HumanPlayer(boardGame);
+    }
+
+
 
     @FXML
     void homePage(ActionEvent event) throws IOException {
@@ -80,6 +92,7 @@ public class dashBoadController implements BoardUi {
         AnchorPane load = FXMLLoader.load(getClass().getResource("/view/logingPage.fxml"));
         anDash.getChildren().add(load);
     }
+
     @FXML
     void onButtClick(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
@@ -102,8 +115,16 @@ public class dashBoadController implements BoardUi {
     }
 
     @Override
-    public void updateBoard(int i, int j, Piece piece) {
-
+    public void updateBoard(int row, int col, Piece piece) {
+        if (row == 0 && col == 0) button1.setText(piece.toString());
+        else if (row == 0 && col == 1) button2.setText(piece.toString());
+        else if (row == 0 && col == 2) button3.setText(piece.toString());
+        else if (row == 1 && col == 0) button4.setText(piece.toString());
+        else if (row == 1 && col == 1) button5.setText(piece.toString());
+        else if (row == 1 && col == 2) button6.setText(piece.toString());
+        else if (row == 2 && col == 0) button7.setText(piece.toString());
+        else if (row == 2 && col == 1) button8.setText(piece.toString());
+        else if (row == 2 && col == 2) button9.setText(piece.toString());
     }
 
     @FXML
