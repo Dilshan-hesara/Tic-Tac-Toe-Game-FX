@@ -104,7 +104,7 @@ public class dashBoadController implements BoardUi {
 
         int row = -1, col = -1;
         switch (buttonId) {
-            case "button1": row = 0; col = 0; break;
+            case "button1": row = 0; col = 0;break;
             case "button2": row = 0; col = 1; break;
             case "button3": row = 0; col = 2; break;
             case "button4": row = 1; col = 0; break;
@@ -120,7 +120,7 @@ public class dashBoadController implements BoardUi {
 
 
             humanPlayer.move(row, col);
-            winnerText.setText("Wait, AI is playing...");
+
             updateUi();
 
             if (boardGame.checkWinner() != null) {
