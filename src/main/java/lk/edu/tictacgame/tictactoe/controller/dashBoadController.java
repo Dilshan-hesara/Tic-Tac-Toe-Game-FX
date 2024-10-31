@@ -126,11 +126,11 @@ public class dashBoadController implements BoardUi {
             if (boardGame.checkWinner() != null) {
                 winnerText.setText(boardGame.checkWinner().getWinningPiece().toString());
                 disableAllButt();
-                showAlt("X Won!");
+                showAlt("X Win!");
                 newGame();
 
             } else if (boardGame.isFull()) {
-                showAlt("Tie! Play Again.");
+                showAlt("Draw !! Play Again.");
             } else {
                 aiPlayer.findBestMove();
                 updateUi();

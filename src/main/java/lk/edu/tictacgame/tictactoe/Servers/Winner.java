@@ -21,6 +21,6 @@ public class Winner {
     }
 
     public Piece getWinningPiece() {
-        return winningPiece; // Return the winning piece as a Piece object
+        return winningPiece;
     }
 }

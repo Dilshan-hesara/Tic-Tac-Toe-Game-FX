@@ -23,4 +23,7 @@ public class LogController {
 
     }
 
+    public void buttonOnClick(ActionEvent actionEvent) {
+
+    }
 }
